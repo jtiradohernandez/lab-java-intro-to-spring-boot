@@ -20,27 +20,20 @@ public class PatientService {
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
     }
-    //paso 5
 
     public Optional<Patient> getPatientId(int ID) {
         return patientRepository.findByPatientId(ID);
     }
-    // paso 6
 
     public List<Patient> getPatientRangeDate(Date initDate, Date endDate) {
         return patientRepository.findByDateOfBirthBetween(initDate,endDate);
-    }//paso 7
-
+    }
 
     public List<Patient> getPatientByDoctorDepartment(Optional<String> department) {
         return patientRepository.findByDoctorDepartment(department);
     }
-    //paso 8
-
 
     public List<Patient> getPatienByDoctorStatus(Optional<EmployeeStatus> status ) {
         return patientRepository.findByDoctorStatus(status);
     }
-    //paso 9
-
 }

@@ -18,8 +18,9 @@ public class Patient {
 
     private String name;
     private Date dateOfBirth;
-    @OneToOne
-    @JoinColumn(name="employee_id")
+
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
     private Employee admittedBy;
 
 

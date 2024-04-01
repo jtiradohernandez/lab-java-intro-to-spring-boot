@@ -18,17 +18,17 @@ public class EmployeeService {
 
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
-    } //Paso 1
+    }
 
     public Optional<Employee> getEmployeeId(int ID) {
         return employeeRepository.findByEmployeeId(ID);
-    }//Paso 2
+    }
 
     public List<Employee> getEmployeesByStatus(Optional<EmployeeStatus> status) {
         return employeeRepository.findByStatus(status);
-    } //Paso 3
+    }
 
     public List<Employee> getEmployeesByDepartment(Optional<String> department) {
         return employeeRepository.findAllByDepartment(department);
-    } //Paso
+    }
 }
